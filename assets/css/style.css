@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo: #fff;
+    --branco: #fff;
+    --linhas: #000;
+    --texto: #000;
+    --texto-leve: #888;
+    --sombra: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    background: rgba(0, 0, 0, 0.06);
+    font-family: 'MrDeHaviland-Regular';
+    font-size: 30px;
+    text-align: left;
+    height: 74px;
+    box-shadow: 1px 1px 2px var(--sombra);
+    border-radius: 100%;
+    padding: 20px;
+    margin: 0.8rem;
+}
+
+.header-logo>p {
+    transform: translate(-2px, 2px);
+}
+
+.header-menu {
+    font-size: 40px;
+    padding: 15px;
+    margin: 0.3rem;
+}
+
+
+/* INICIO */
+
+.inicio {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 480px;
+    padding: 0.5rem 1rem;
+    margin: 1.6rem 0;
+}
+
+
+/* LOGO PRINCIPAL */
+
+.inicio-logo {
+    font-family: 'AbhayaLibre';
+    text-align: center;
+    padding: 0.3rem;
+    margin: 0.5rem;
+}
+
+.inicio-logo>p:first-child {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.inicio-logo>p:last-child {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.4rem;
+}
+
+
+/* CARROSSEL */
+
+.inicio-carrossel {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.inicio-carrossel>img {
+    width: 85%;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.inicio-carrossel-linha {
+    background: var(--linhas);
+    width: 95%;
+    border: 1px solid var(--linhas);
+    filter: blur(2px);
+    transform: skewX(-50deg);
+    margin: 1rem auto;
+}
