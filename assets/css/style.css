@@ -5,7 +5,8 @@
 }
 
 :root {
-    --fundo: #fff;
+    --fundo-principal: #fff;
+    --fundo-secundario: #fff;
     --branco: #fff;
     --linhas: #000;
     --texto: #000;
@@ -14,9 +15,20 @@
 }
 
 body {
-    background: var(--fundo);
+    background: var(--fundo-principal);
     color: var(--texto);
     font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+section {
+    margin: 5rem 0;
 }
 
 
@@ -60,9 +72,8 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 520px;
+    height: fit-content;
     padding: 0.5rem 1rem;
-    margin: 1.6rem 0;
 }
 
 
@@ -70,18 +81,19 @@ header {
 
 .inicio-logo {
     font-family: 'AbhayaLibre';
+    width: 100%;
     text-align: center;
     padding: 0.3rem;
     margin: 0.5rem;
 }
 
-.inicio-logo>p:first-child {
-    font-size: 2.2rem;
+.inicio-logo p:first-child {
+    font-size: 2.1rem;
     font-weight: 800;
     text-decoration: underline;
 }
 
-.inicio-logo>p:last-child {
+.inicio-logo p:last-child {
     font-size: 1.1rem;
     font-weight: 400;
     letter-spacing: 0.4rem;
@@ -102,16 +114,18 @@ header {
     height: auto;
     border-radius: 5px;
     margin: 30px 0;
+    box-shadow: 2px 2px 8px 0 var(--sombra);
 }
 
-.inicio-carrossel-linha {
+
+/* .inicio-carrossel-linha {
     background: var(--linhas);
     width: 95%;
     border: 1px solid var(--linhas);
     filter: blur(2px);
     transform: skewX(-50deg);
     margin: 1rem auto;
-}
+} */
 
 
 /* SOBRE */
@@ -121,8 +135,8 @@ header {
     flex-flow: column nowrap;
     align-items: center;
     width: 100%;
-    height: 520px;
-    margin: 1rem 0;
+    height: fit-content;
+    background: var(--fundo-secundario);
 }
 
 .sobre-foto {
@@ -133,22 +147,100 @@ header {
 }
 
 .sobre-foto>img {
-    width: 75%;
-    height: 350px;
-    object-fit: cover;
+    width: 60%;
+    height: auto;
+    /* object-fit: cover; */
     margin: 30px 0;
-    box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.50);
+    box-shadow: 5px 5px 20px 0 var(--sombra);
 }
 
 .sobre-texto {
-    color: #000000;
-    font-size: 14px;
-    font-style: italic;
-    font-weight: 300;
-    line-height: 1.3rem;
     width: 70%;
 }
 
 .sobre-texto p {
+    font-size: 0.9rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.3rem;
     margin: 1rem 0;
+}
+
+
+/* MISSAO */
+
+.missao {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: fit-content;
+}
+
+.missao-texto {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    width: 90%;
+    height: 100%;
+    margin: 1rem 0;
+}
+
+.missao-texto strong {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+/* PROJETOS */
+
+.projetos {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    background: var(--fundo-secundario);
+}
+
+.projeto-titulo-principal {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.projeto-titulo-secundario {
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.projetos-estilo1 {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 3.5rem 0;
+}
+
+.projetos-estilo1-titulo {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.projetos-estilo1-imagens {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.projetos img {
+    width: 85%;
+    height: auto;
+    border-radius: 5px;
+    margin: 30px 0;
+    box-shadow: 2px 2px 8px 0 var(--sombra);
 }
