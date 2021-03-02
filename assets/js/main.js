@@ -1,18 +1,78 @@
-// - 10K pageviews / $8 per month
-// - 50K pageviews / $12 per month
-// - 100K pageviews / $16 per month
-// - 500k pageviews / $24 per month
-// - 1M pageviews / $36 per month
-
-// const valueToViews = [ "10K", "50K", "100K", "500K", "1M"]
-// const valueToPrice = [ 8, 12, 16, 24, 36]
+// CORREÇOES PARA O MENU
 
 const menuList = document.getElementById("menu-list")
 let menuInput = document.getElementById("menu-checkbox")
+let carrossel = document.getElementById("carrossel")
 
 menuList.addEventListener("touchstart", () => {
     if (menuInput.checked == true) menuInput.checked = false;
 })
+
+menuInput.addEventListener("change", () => {
+    menuInput.checked == true ?
+        carrossel.style.visibility = 'hidden' :
+        carrossel.style.visibility = 'visible'
+})
+
+// CARROSSEL DE IMAGENS
+
+$('.inicio-carrossel').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: 'linear',
+    slidesToShow: 1,
+    slidestoScroll: 1,
+    centerMode: true,
+    centerPadding: '10%',
+    focusOnSelect: true,
+    mobileFirst: true,
+    zIndex: 0,
+});
+
+
+
+// const carrosselImagens = ["/assets/img/toa-heftiba-FV3GConVSss-unsplash.jpg", "/assets/img/rune-enstad-UXFJ-6Zj27M-unsplash.jpg", "/assets/img/roberto-nickson-tleCJiDOri0-unsplash.jpg"]
+// let carrosselImagemPrincipal = document.getElementById('carrossel-imagem-principal')
+
+// function carrossel(indexAtual) {
+//     let index = ((indexAtual + 1) % 3)
+//     carrosselImagemPrincipal.src = carrosselImagens[index]
+//     setTimeout(`carrossel(${indexAtual+1})`, 3000)
+// }
+
+// carrossel(0);
+
+// function comeco(){
+// document.getElementById('carrossel-imagem-principal').src = array1[0]
+// document.form.texto.value="0"
+// }
+
+// function mais(){
+// document.form.texto.value = Math.floor (1+ 1 - 2 + (document.form.texto.value) * 1 + 1)
+// if (document.form.texto.value > 2)
+// {document.form.texto.value = 0}
+// }
+
+// function menos(){
+// document.form.texto.value = Math.floor (1+ 1 - 2 + (document.form.texto.value) * 1 -1)
+// if (document.form.texto.value < 0)
+// {document.form.texto.value = 2}
+// }
+
+// function regular(){
+// document.getElementById('imgId').src = array1[document.form.texto.value];
+// setTimeout("regular()", 1)
+// }
+
+
+
+
+
+
+
 
 // trafficButton.oninput = function() {
 //     let index = Math.ceil(this.value/25)
