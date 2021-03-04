@@ -2,6 +2,7 @@
 
 let menuList = document.getElementById("menu-list")
 let menuInput = document.getElementById("menu-checkbox")
+    // let carrossel = document.getElementById("carrossel")
 
 menuList.addEventListener("touchstart", () => {
     if (menuInput.checked === true) menuInput.checked = false;
@@ -10,6 +11,12 @@ menuList.addEventListener("touchstart", () => {
 menuList.addEventListener("click", () => {
     if (menuInput.checked === true) menuInput.checked = false;
 })
+
+// menuInput.addEventListener("input", () => {
+//     menuInput.checked == true ?
+//         carrossel.style.visibility = 'hidden' :
+//         carrossel.style.visibility = 'visible'
+// })
 
 // CARROSSEL DE IMAGENS
 $(document).ready(function() {
@@ -53,3 +60,8 @@ $(document).ready(function() {
         ]
     })
 })
+
+// if (window.matchMedia("(min-width: 1080px)").matches) {
+//     /* the viewport is less than 768 pixels wide */
+//     $('.inicio-carrossel').slick();
+// }
