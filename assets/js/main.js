@@ -14,42 +14,37 @@ menuList.addEventListener("click", () => {
 // CARROSSEL DE IMAGENS
 $(document).ready(function() {
     $('.inicio-carrossel').slick({
+        accessibility: true,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        centerMode: true,
+        centerPadding: '20%',
+        cssEase: 'linear',
+        dots: true,
+        easing: 'linear',
+        focusOnSelect: true,
+        infinite: true,
         mobileFirst: false,
+        slidesToScroll: 1,
+        slidesToShow: 2,
+        speed: 500,
         responsive: [{
-                breakpoint: 1080,
-                settings: {
-                    dots: true,
-                    infinite: true,
-                    speed: 500,
-                    autoplay: true,
-                    autoplaySpeed: 4000,
-                    draggable: true,
-                    cssEase: 'linear',
-                    slidesToShow: 1,
-                    slidestoScroll: 1,
-                    centerMode: true,
-                    centerPadding: '10%'
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    dots: true,
-                    infinite: true,
-                    speed: 500,
-                    autoplay: true,
-                    autoplaySpeed: 4000,
-                    draggable: true,
-                    cssEase: 'linear',
-                    slidesToShow: 1,
-                    slidestoScroll: 1,
-                    centerMode: true,
-                    centerPadding: '10%'
-                }
-            }, {
-                breakpoint: 620,
-                settings: "unslick"
+            breakpoint: 1024,
+            settings: {
+                arrows: false,
+                autoplay: false,
+                centerMode: true,
+                centerPadding: '10%',
+                draggable: true,
+                slidesToShow: 1,
+                swipe: true,
+                swipeToSlide: true,
+                touchMove: true
             }
-        ]
+        }, {
+            breakpoint: 768,
+            settings: "unslick"
+        }]
     })
 })
