@@ -19,7 +19,7 @@ $(document).ready(function() {
         autoplay: true,
         autoplaySpeed: 4000,
         centerMode: true,
-        centerPadding: '20%',
+        centerPadding: '30%',
         cssEase: 'linear',
         dots: true,
         easing: 'linear',
@@ -34,8 +34,7 @@ $(document).ready(function() {
             settings: {
                 arrows: false,
                 autoplay: false,
-                centerMode: true,
-                centerPadding: '10%',
+                centerPadding: '12%',
                 draggable: true,
                 slidesToShow: 1,
                 swipe: true,

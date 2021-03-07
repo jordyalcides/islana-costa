@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: 100%;
-    height: fit-content;
 }
 
 :root {
@@ -17,6 +15,8 @@
 }
 
 body {
+    width: 100%;
+    height: fit-content;
     background: var(--fundo-principal);
     color: var(--texto);
 }
@@ -59,9 +59,12 @@ strong {
     margin: 0.67rem 0;
 }
 
-section,
-footer {
+section {
     padding: 7rem 0 0.25rem;
+}
+
+footer {
+    padding: 4rem 0;
 }
 
 
@@ -225,19 +228,10 @@ header>a {
 }
 
 
-/* CARROSSEL */
+/* DESTAQUE */
 
-.inicio-carrossel {
-    display: none;
-    /* margin: 2rem 0; */
-}
 
-.inicio-carrossel img {
-    border-radius: 6px;
-    box-shadow: 2px 2px 8px 0 var(--sombra);
-    margin-top: 5rem;
-    /* margin: 0.75rem; */
-}
+/* MOBILE */
 
 .inicio-mobile {
     display: flex;
@@ -249,6 +243,10 @@ header>a {
     border-radius: 6px;
     box-shadow: 2px 2px 8px 0 var(--sombra);
     margin-top: 4rem;
+}
+
+.inicio-carrossel {
+    display: none;
 }
 
 
@@ -417,7 +415,7 @@ header>a {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     font-size: 2.5rem;
 }
 
@@ -427,6 +425,9 @@ header>a {
 @media(min-width: 768px) {
     html {
         font-size: 87.5%;
+    }
+    h1 {
+        font-size: 2.5rem;
     }
     /* CABEÇALHO */
     .header-titulo {
@@ -468,19 +469,64 @@ header>a {
         padding: 0 1rem;
     }
     /* INICIO */
+    /* LOGO */
     .inicio-logo p:first-child {
         font-size: 5rem;
     }
     .inicio-logo p:last-child {
         font-size: 3.8rem;
     }
+    /* DESTAQUE */
+    /* CARROSSEL */
     .inicio-carrossel {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
+        width: 100%;
+        height: auto;
+        margin: 6rem 0 2rem;
+    }
+    .inicio-carrossel img {
+        border-radius: 6px;
+        box-shadow: 2px 2px 8px 0 var(--sombra);
     }
     .inicio-mobile {
         display: none;
+    }
+    /* SOBRE */
+    .sobre-texto p {
+        font-size: 1.65rem;
+        line-height: 2rem;
+    }
+    /* MISSAO */
+    .missao-texto {
+        line-height: 3rem;
+    }
+    .missao-texto strong {
+        font-size: 1.75rem;
+    }
+    /* PROJETOS */
+    .projeto-titulo-principal {
+        font-size: 1.8rem;
+    }
+    .projeto-titulo-secundario {
+        font-size: 1.5rem;
+    }
+    /* CONTATO */
+    .contato-texto h3 {
+        font-size: 1.55rem;
+        padding: 1.2rem 0;
+    }
+    .contato-texto h2 {
+        font-size: 1.78rem;
+        padding: 1.2rem 0;
+    }
+    .contato-texto h1 {
+        font-size: 2.37rem;
+        padding: 1.2rem 0;
+    }
+    .contato-texto strong {
+        font-size: 2.3rem;
     }
     /* RODAPE */
     .redes-sociais {
