@@ -1,5 +1,4 @@
 // CORREÇOES PARA O MENU
-
 let menuList = document.getElementById("menu-list")
 let menuInput = document.getElementById("menu-checkbox")
 
@@ -14,36 +13,35 @@ menuList.addEventListener("click", () => {
 // CARROSSEL DE IMAGENS
 $(document).ready(function() {
     $('.inicio-carrossel').slick({
-        accessibility: true,
-        arrows: true,
-        autoplay: true,
-        autoplaySpeed: 4000,
+        arrows: false,
+        autoplay: false,
         centerMode: true,
-        centerPadding: '30%',
-        cssEase: 'linear',
+        centerPadding: '20px',
+        cssEase: 'cubic-bezier(0.33, 0.66, 0.96, 1.0)',
         dots: true,
-        easing: 'linear',
-        focusOnSelect: true,
+        draggable: true,
         infinite: true,
-        mobileFirst: false,
-        slidesToScroll: 1,
-        slidesToShow: 2,
-        speed: 500,
+        mobileFirst: true,
+        speed: 1000,
+        swipe: true,
+        swipeToSlide: true,
+        touchMove: true,
         responsive: [{
-            breakpoint: 1024,
+            breakpoint: 768,
             settings: {
-                arrows: false,
-                autoplay: false,
-                centerPadding: '12%',
-                draggable: true,
-                slidesToShow: 1,
-                swipe: true,
-                swipeToSlide: true,
-                touchMove: true
+                autoplay: true,
+                autoplaySpeed: 3800,
+                centerPadding: '100px',
             }
         }, {
-            breakpoint: 768,
-            settings: "unslick"
+            breakpoint: 1080,
+            settings: {
+                accessibility: true,
+                arrows: true,
+                centerPadding: '120px',
+                focusOnSelect: true,
+                slidesToShow: 2,
+            }
         }]
     })
 })
