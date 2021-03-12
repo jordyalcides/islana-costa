@@ -261,7 +261,6 @@ header>a {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    background: var(--fundo-secundario);
 }
 
 .sobre-foto {
@@ -322,7 +321,6 @@ header>a {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    background: var(--fundo-secundario);
 }
 
 .projetos-estilos {
@@ -371,7 +369,6 @@ header>a {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-between;
-    background: var(--fundo);
 }
 
 .contato-video {
@@ -561,6 +558,7 @@ header>a {
     /* SOBRE */
     .sobre {
         flex-flow: row nowrap;
+        background: var(--fundo-secundario);
     }
     .sobre-titulo {
         display: none;
@@ -572,7 +570,13 @@ header>a {
     .missao-titulo {
         display: none;
     }
+    .missao-texto strong {
+        color: var(--texto-leve);
+    }
     /* PROJETOS */
+    .projetos {
+        background: var(--fundo-secundario);
+    }
     .projetos-titulo {
         display: none;
     }
@@ -611,7 +615,6 @@ header>a {
     .contato-video {
         display: block;
     }
-    .contato-texto {}
     .contato-texto strong {
         display: none;
     }
