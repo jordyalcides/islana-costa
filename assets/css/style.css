@@ -539,9 +539,19 @@ header>a {
         padding: 15rem 0;
         min-height: 1280px;
     }
+    /* CABECALHO */
+    .header-logo {
+        width: 2.5rem;
+    }
+    .header-titulo {
+        font-size: 1.5rem;
+    }
+    .header-menu-list-item {
+        font-size: 1rem !important;
+    }
     /* INICIO */
     .inicio {
-        padding: 0 0 15rem;
+        padding: 3rem 0 15rem;
         justify-content: space-around;
         min-height: 1020px;
     }
